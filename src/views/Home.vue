@@ -1,8 +1,14 @@
 <template>
   <main class="relative bg-orange-100 text-brand">
-    <nav class="absolute top-0 z-20 flex items-center justify-between w-full px-6 py-4">
+    <nav
+      class="absolute top-0 z-20 flex items-center justify-between w-full px-6 py-4"
+    >
       <a href="/"><img src="/img/logo.png" class="w-28" /></a>
-      <a href="#form" class="px-4 py-1.5 mr-6 transition transform hover:scale-105 text-sm tracking-wider text-orange-100 uppercase rounded-full bg-brand">Join now</a>
+      <a
+        href="#form"
+        class="px-4 py-1.5 mr-6 transition transform hover:scale-105 text-sm tracking-wider text-orange-100 uppercase rounded-full bg-brand"
+        >Join now</a
+      >
     </nav>
     <img
       src="/img/shaar.jpg"
@@ -24,7 +30,10 @@
     />
 
     <section class="flex flex-col items-center px-4 pb-12">
-      <img src="/img/logo.png" class="w-64 mx-auto transform -translate-y-1/2" />
+      <img
+        src="/img/logo.png"
+        class="w-64 mx-auto transform -translate-y-1/2"
+      />
 
       <div class="relative -mt-16">
         <div class="flex items-center justify-center">
@@ -66,7 +75,10 @@
         </p>
       </article>
 
-      <div id="form" class="flex items-center mt-8 space-x-8 text-2xl font-extrabold text-gray-900">
+      <div
+        id="form"
+        class="flex items-center mt-8 space-x-8 text-2xl font-extrabold text-gray-900"
+      >
         <a
           href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
           class="flex items-center space-x-1"
@@ -80,21 +92,85 @@
       <div class="flex items-center mt-2 space-x-4 text-xl">
         <a href="mailto:info@ctlmorocco.com">info@ctlmorocco.com</a>
         <span>|</span>
-        <a href="https://www.ctlmorocco.com" target="_blank">www.ctlmorocco.com</a>
+        <a href="https://www.ctlmorocco.com" target="_blank"
+          >www.ctlmorocco.com</a
+        >
       </div>
 
-      <form name="morocco-signup" method="POST" netlify class="relative z-10 block max-w-full mt-20 space-y-2 -mb-44 w-96">
-        <input type="text" name="name" placeholder="Name" class="form-input" >
-        <input type="email" name="email" placeholder="Email" class="form-input" >
-        <input type="tel" name="phone" placeholder="Tel" class="form-input" >
+      <form
+        @submit.prevent="submit"
+        name="morocco-signup"
+        netlify
+        class="relative z-10 block max-w-full mt-20 space-y-2 -mb-44 w-96"
+      >
+        <input
+          v-model="form.name"
+          type="text"
+          name="name"
+          placeholder="Name"
+          class="form-input"
+        />
+        <input
+          v-model="form.email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="form-input"
+        />
+        <input
+          v-model="form.phone"
+          type="tel"
+          name="phone"
+          placeholder="Tel"
+          class="form-input"
+        />
         <p class="py-2 text-center">
-          <button type="submit" class="px-6 py-2 text-sm font-semibold tracking-wider text-orange-100 uppercase rounded-full bg-brand">I want to join</button>
+          <button
+            type="submit"
+            class="px-6 py-2 text-sm font-semibold tracking-wider text-orange-100 uppercase rounded-full bg-brand"
+          >
+            I want to join
+          </button>
+          <span v-if="message" class="mt-2 text-brand">{{ message }}</span>
         </p>
       </form>
     </section>
     <img src="/img/tour.jpg" class="relative bottom-0 z-0 w-full feather-top" />
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {},
+      message: '',
+    };
+  },
+  methods: {
+    submit(e) {
+      let formData = new FormData(e.target);
+      console.log(formData);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.form,
+        }),
+      })
+        .then(() => this.message = 'Thank you for your submission!')
+        .catch((error) => console.log(error));
+    },
+  },
+};
+
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+</script>
 
 <style>
 html {
