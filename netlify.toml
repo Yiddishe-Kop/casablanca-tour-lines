@@ -1,5 +1,5 @@
 [build]
-  ignore = "git diff --quiet HEAD^ HEAD src index.html"
+  ignore = "git diff --quiet HEAD^ HEAD src public index.html"
   publish = "dist"
   command = "yarn run build"
 
