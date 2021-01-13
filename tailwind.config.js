@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
@@ -14,11 +15,29 @@ module.exports = {
     ],
   },
   theme: {
+    colors: {
+      brand: '#0C3E5A',
+      transparent: 'transparent',
+      white: colors.white,
+      gray: colors.blueGray,
+      amber: colors.amber,
+      orange: colors.orange,
+      lime: colors.lime,
+      green: colors.emerald,
+      blue: colors.indigo,
+      purple: colors.fuchsia,
+      red: colors.rose,
+      pink: colors.pink,
+    },
     extend: {
       fontWeight: ['hover', 'focus'],
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        huge: '16rem',
+        massive: '20rem'
+      }
     },
   },
 }
