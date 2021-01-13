@@ -1,11 +1,11 @@
 <template>
-  <main class="relative bg-orange-100 text-brand">
+  <main class="relative bg-plane text-brand">
     <nav
       class="absolute top-0 z-20 flex items-center justify-between w-full px-6 py-4"
     >
       <a href="/"><img src="/img/logo.png" class="w-28" /></a>
       <a
-        href="#form"
+        href="#contact"
         class="px-4 py-1.5 mr-6 transition transform hover:scale-105 text-sm tracking-wider text-orange-100 uppercase rounded-full bg-brand"
         >Join now</a
       >
@@ -35,26 +35,26 @@
         class="w-64 mx-auto transform -translate-y-1/2"
       />
 
-      <div class="flex flex-col items-center justify-center md:flex-row">
-        <div class="relative -mt-16 sm:m-0">
+      <div class="flex flex-col items-center justify-center md:flex-row md:space-x-12">
+        <div class="relative -mt-16 sm:m-0 sm:-mt-24">
           <div class="flex items-center justify-center">
-            <span class="-mr-8 font-black leading-none text-huge sm:text-massive"
+            <span class="-mr-8 font-black leading-none origin-right transform scale-x-75 text-huge sm:text-massive"
               >4</span
             >
             <img src="/img/plane-window.png" class="w-56 select-none sm:w-64" />
           </div>
-          <div class="absolute flex justify-center w-full -bottom-12">
+          <div class="absolute flex justify-center w-full -bottom-12 sm:-bottom-16">
             <div
-              class="px-6 py-4 text-center transform bg-white shadow-md rotate-6"
+              class="px-10 py-4 tracking-widest text-center transform bg-white shadow-md rotate-6"
             >
-              <p class="text-lg font-bold">Tickets to Morroco</p>
-              <p class="font-serif text-5xl font-black">ONLY!</p>
+              <p class="text-lg font-bold sm:text-xl whitespace-nowrap">Tickets to Morroco</p>
+              <p class="font-serif text-5xl font-black sm:text-6xl">ONLY!</p>
             </div>
           </div>
         </div>
 
         <article class="max-w-lg mt-40 text-lg md:m-0">
-          <div class="hidden shape md:block"></div>
+          <!-- <div class="hidden shape md:block"></div> -->
           <div class="space-y-2">
             <p>
               In these days when a pandemic is raging in the world, who does not
@@ -62,7 +62,7 @@
               Tzaddikim of previous generations in Morocco, however this year the
               borders of Morocco are closed due Corona pandemic.
             </p>
-            <p class="font-bold">
+            <p class="text-xl font-bold">
               Fortunately, Casablanca Tour Lines has obtained 40 entry visas
               specialy for the celebration of the Yahrzeit of the holy Tzaddik Baal
               Yeshuat Rabbi Yitzchak Abuhatzira zy"a.
@@ -79,10 +79,12 @@
           </div>
         </article>
       </div>
+    </section>
 
+    <section id="contact" class="flex flex-col items-center px-4 text-gray-100 py-14 bg-brand">
+      <h2 class="text-5xl font-bold">Contact Us</h2>
       <div
-        id="form"
-        class="flex items-center mt-8 space-x-8 text-2xl font-extrabold text-gray-900 sm:mt-16"
+        class="flex items-center space-x-8 text-2xl font-extrabold sm:mt-16"
       >
         <a
           href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
@@ -106,7 +108,7 @@
         @submit.prevent="submit"
         name="morocco-signup"
         netlify
-        class="relative z-10 block max-w-full mt-20 -mb-56 space-y-2 w-96"
+        class="relative z-10 block max-w-full mt-20 space-y-2 w-96"
       >
         <input
           v-model="form.name"
@@ -132,19 +134,28 @@
         <p class="py-2 text-center">
           <button
             type="submit"
-            class="px-6 py-2 text-sm font-semibold tracking-wider text-orange-100 uppercase transition transform rounded-full hover:scale-105 focus:outline-none bg-brand"
+            class="px-6 py-2 text-sm font-semibold tracking-wider text-orange-800 uppercase transition transform bg-orange-100 rounded-full hover:scale-105 focus:outline-none"
           >
             I want to join
           </button>
         </p>
         <p v-if="message" class="pt-4 text-center text-brand">
-          <span class="px-4 py-2 bg-orange-100 bg-opacity-50 rounded-md">{{
+          <span class="px-4 py-2 bg-orange-100 rounded-md">{{
             message
           }}</span>
         </p>
       </form>
     </section>
-    <img src="/img/tour.jpg" class="relative bottom-0 z-0 w-full feather-top" />
+
+    <section class="flex flex-col items-center px-4 bg-gray-100 py-14 text-brand">
+      <div class="grid max-w-full gap-6 sm:grid-cols-2">
+        <img v-for="i in 9" :key="i" :src="`/img/hotel/${i}.jpeg`" class="w-full rounded-md">
+      </div>
+    </section>
+
+    <section class="relative">
+      <img src="/img/tour.jpg" class="relative bottom-0 z-0 w-full" />
+    </section>
   </main>
 </template>
 
@@ -199,6 +210,6 @@ html {
   opacity: .2;
 }
 .form-input {
-  @apply block w-full bg-gray-200 py-2 px-3 rounded-md focus:bg-gray-100 outline-none border-transparent focus:border-brand border-2;
+  @apply block w-full bg-gray-200 py-2 px-3 rounded-md focus:bg-gray-100 outline-none border-transparent focus:border-orange-500 border-2;
 }
 </style>

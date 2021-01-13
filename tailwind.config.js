@@ -17,6 +17,7 @@ module.exports = {
   theme: {
     colors: {
       brand: '#0C3E5A',
+      plane: '#EAEBEC',
       transparent: 'transparent',
       white: colors.white,
       gray: colors.blueGray,
