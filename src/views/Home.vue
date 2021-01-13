@@ -35,49 +35,54 @@
         class="w-64 mx-auto transform -translate-y-1/2"
       />
 
-      <div class="relative -mt-16">
-        <div class="flex items-center justify-center">
-          <span class="-mr-8 font-black leading-none text-huge sm:text-massive"
-            >4</span
-          >
-          <img src="/img/plane-window.png" class="w-56 select-none sm:w-64" />
-        </div>
-        <div class="absolute flex justify-center w-full -bottom-12">
-          <div
-            class="px-6 py-4 text-center transform bg-white shadow-md rotate-6"
-          >
-            <p class="text-lg font-bold">Tickets to Morroco</p>
-            <p class="font-serif text-5xl font-black">ONLY!</p>
+      <div class="flex flex-col items-center justify-center md:flex-row">
+        <div class="relative -mt-16 sm:m-0">
+          <div class="flex items-center justify-center">
+            <span class="-mr-8 font-black leading-none text-huge sm:text-massive"
+              >4</span
+            >
+            <img src="/img/plane-window.png" class="w-56 select-none sm:w-64" />
+          </div>
+          <div class="absolute flex justify-center w-full -bottom-12">
+            <div
+              class="px-6 py-4 text-center transform bg-white shadow-md rotate-6"
+            >
+              <p class="text-lg font-bold">Tickets to Morroco</p>
+              <p class="font-serif text-5xl font-black">ONLY!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <article class="max-w-lg mt-40 space-y-2 text-lg">
-        <p>
-          In these days when a pandemic is raging in the world, who does not
-          need salvation, every year we travel to pray on the tombs of the holy
-          Tzaddikim of previous generations in Morocco, however this year the
-          borders of Morocco are closed due Corona pandemic.
-        </p>
-        <p class="font-bold">
-          Fortunately, Casablanca Tour Lines has obtained 40 entry visas
-          specialy for the celebration of the Yahrzeit of the holy Tzaddik Baal
-          Yeshuat Rabbi Yitzchak Abuhatzira zy"a.
-        </p>
-        <p>
-          If you're interested in being among those 40 individuals of virtue who
-          will be privileged to arrive in Morocco this year for the magical
-          eight-day journey, including an uplifiting Shabbat in a unique and
-          uplifting atmosphere -
-        </p>
-        <p class="pt-2 text-xl font-bold uppercase sm:text-2xl">
-          Hurry & sign up today!
-        </p>
-      </article>
+        <article class="max-w-lg mt-40 text-lg md:m-0">
+          <div class="hidden shape md:block"></div>
+          <div class="space-y-2">
+            <p>
+              In these days when a pandemic is raging in the world, who does not
+              need salvation, every year we travel to pray on the tombs of the holy
+              Tzaddikim of previous generations in Morocco, however this year the
+              borders of Morocco are closed due Corona pandemic.
+            </p>
+            <p class="font-bold">
+              Fortunately, Casablanca Tour Lines has obtained 40 entry visas
+              specialy for the celebration of the Yahrzeit of the holy Tzaddik Baal
+              Yeshuat Rabbi Yitzchak Abuhatzira zy"a.
+            </p>
+            <p>
+              If you're interested in being among those 40 individuals of virtue who
+              will be privileged to arrive in Morocco this year for the magical
+              eight-day journey, including an uplifiting Shabbat in a unique and
+              uplifting atmosphere -
+            </p>
+            <p class="pt-2 text-xl font-bold uppercase sm:text-2xl">
+              Hurry & sign up today!
+            </p>
+          </div>
+        </article>
+      </div>
 
       <div
         id="form"
-        class="flex items-center mt-8 space-x-8 text-2xl font-extrabold text-gray-900"
+        class="flex items-center mt-8 space-x-8 text-2xl font-extrabold text-gray-900 sm:mt-16"
       >
         <a
           href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
@@ -101,7 +106,7 @@
         @submit.prevent="submit"
         name="morocco-signup"
         netlify
-        class="relative z-10 block max-w-full mt-20 space-y-2 -mb-44 w-96"
+        class="relative z-10 block max-w-full mt-20 -mb-56 space-y-2 w-96"
       >
         <input
           v-model="form.name"
@@ -127,11 +132,15 @@
         <p class="py-2 text-center">
           <button
             type="submit"
-            class="px-6 py-2 text-sm font-semibold tracking-wider text-orange-100 uppercase rounded-full bg-brand"
+            class="px-6 py-2 text-sm font-semibold tracking-wider text-orange-100 uppercase transition transform rounded-full hover:scale-105 focus:outline-none bg-brand"
           >
             I want to join
           </button>
-          <span v-if="message" class="mt-2 text-brand">{{ message }}</span>
+        </p>
+        <p v-if="!message" class="pt-4 text-center text-brand">
+          <span class="px-4 py-2 bg-orange-100 bg-opacity-50 rounded-md">{{
+            message
+          }}</span>
         </p>
       </form>
     </section>
@@ -144,7 +153,7 @@ export default {
   data() {
     return {
       form: {},
-      message: '',
+      message: "",
     };
   },
   methods: {
@@ -159,7 +168,7 @@ export default {
           ...this.form,
         }),
       })
-        .then(() => this.message = 'Thank you for your submission!')
+        .then(() => (this.message = "Thank you for your submission!"))
         .catch((error) => console.log(error));
     },
   },
@@ -183,6 +192,13 @@ html {
 .feather-top {
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
   mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
+}
+.shape {
+  shape-outside: polygon(0% 0%,0% 0%,50% 100%,0% 100%);
+  width: 300px;
+  height: 500px;
+  float: left;
+  opacity: .2;
 }
 .form-input {
   @apply block w-full bg-gray-200 py-2 px-3 rounded-md focus:bg-gray-100 outline-none border-transparent focus:border-brand border-2;
