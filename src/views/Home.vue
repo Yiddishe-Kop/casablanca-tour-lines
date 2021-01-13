@@ -137,7 +137,7 @@
             I want to join
           </button>
         </p>
-        <p v-if="!message" class="pt-4 text-center text-brand">
+        <p v-if="message" class="pt-4 text-center text-brand">
           <span class="px-4 py-2 bg-orange-100 bg-opacity-50 rounded-md">{{
             message
           }}</span>
@@ -158,8 +158,6 @@ export default {
   },
   methods: {
     submit(e) {
-      let formData = new FormData(e.target);
-      console.log(formData);
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
