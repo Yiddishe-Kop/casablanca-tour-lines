@@ -80,7 +80,7 @@
       <div class="flex items-center mt-2 space-x-4 text-xl">
         <a href="mailto:info@ctlmorocco.com">info@ctlmorocco.com</a>
         <span>|</span>
-        <a href="www.ctlmorocco.com" target="_blank">www.ctlmorocco.com</a>
+        <a href="https://www.ctlmorocco.com" target="_blank">www.ctlmorocco.com</a>
       </div>
 
       <form name="morocco-signup" method="POST" data-netlify="true" class="relative z-10 block max-w-full mt-20 space-y-2 -mb-44 w-96">
