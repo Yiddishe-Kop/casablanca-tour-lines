@@ -16,11 +16,11 @@
     />
     <div class="relative px-2 pt-32 text-center">
       <div class="py-24">
-        <h1 class="font-black transform text-7xl sm:text-8xl -rotate-6">
+        <h1 class="font-black text-7xl sm:text-8xl md:text-9xl">
           Miracles<br />in Toulal
         </h1>
       </div>
-      <h3 class="font-serif text-2xl font-bold sm:text-3xl text-amber-900">
+      <h3 class="font-serif text-3xl font-bold sm:text-4xl md:text-5xl text-amber-900">
         At the tomb of the Holy Tzaddik<br />Rabbi Yitzchok Abuchatzira zy"a
       </h3>
     </div>
@@ -29,25 +29,32 @@
       class="relative bottom-0 z-0 w-full feather-top"
     />
 
-    <section class="flex flex-col items-center px-4 pb-12">
+    <section class="flex flex-col items-center px-4 pb-32">
       <img
         src="/img/logo.png"
         class="w-64 mx-auto transform -translate-y-1/2"
       />
 
-      <div class="flex flex-col items-center justify-center md:flex-row md:space-x-12">
+      <div
+        class="flex flex-col items-center justify-center md:flex-row md:space-x-12"
+      >
         <div class="relative -mt-16 sm:m-0 sm:-mt-24">
           <div class="flex items-center justify-center">
-            <span class="-mr-8 font-black leading-none origin-right transform scale-x-75 text-huge sm:text-massive"
+            <span
+              class="-mr-8 font-black leading-none origin-right transform scale-x-75 text-huge sm:text-massive"
               >4</span
             >
             <img src="/img/plane-window.png" class="w-56 select-none sm:w-64" />
           </div>
-          <div class="absolute flex justify-center w-full -bottom-12 sm:-bottom-16">
+          <div
+            class="absolute flex justify-center w-full -bottom-12 sm:-bottom-16"
+          >
             <div
               class="px-10 py-4 tracking-widest text-center transform bg-white shadow-md rotate-6"
             >
-              <p class="text-lg font-bold sm:text-xl whitespace-nowrap">Tickets to Morroco</p>
+              <p class="text-lg font-bold sm:text-xl whitespace-nowrap">
+                Tickets to Morroco
+              </p>
               <p class="font-serif text-5xl font-black sm:text-6xl">ONLY!</p>
             </div>
           </div>
@@ -58,20 +65,20 @@
           <div class="space-y-2">
             <p>
               In these days when a pandemic is raging in the world, who does not
-              need salvation, every year we travel to pray on the tombs of the holy
-              Tzaddikim of previous generations in Morocco, however this year the
-              borders of Morocco are closed due Corona pandemic.
+              need salvation, every year we travel to pray on the tombs of the
+              holy Tzaddikim of previous generations in Morocco, however this
+              year the borders of Morocco are closed due Corona pandemic.
             </p>
             <p class="text-xl font-bold">
               Fortunately, Casablanca Tour Lines has obtained 40 entry visas
-              specialy for the celebration of the Yahrzeit of the holy Tzaddik Baal
-              Yeshuat Rabbi Yitzchak Abuhatzira zy"a.
+              specialy for the celebration of the Yahrzeit of the holy Tzaddik
+              Baal Yeshuat Rabbi Yitzchak Abuhatzira zy"a.
             </p>
             <p>
-              If you're interested in being among those 40 individuals of virtue who
-              will be privileged to arrive in Morocco this year for the magical
-              eight-day journey, including an uplifiting Shabbat in a unique and
-              uplifting atmosphere -
+              If you're interested in being among those 40 individuals of virtue
+              who will be privileged to arrive in Morocco this year for the
+              magical eight-day journey, including an uplifiting Shabbat in a
+              unique and uplifting atmosphere -
             </p>
             <p class="pt-2 text-xl font-bold uppercase sm:text-2xl">
               Hurry & sign up today!
@@ -81,11 +88,12 @@
       </div>
     </section>
 
-    <section id="contact" class="flex flex-col items-center px-4 text-gray-100 py-14 bg-brand">
+    <section
+      id="contact"
+      class="flex flex-col items-center px-4 text-gray-100 py-14 bg-brand"
+    >
       <h2 class="text-5xl font-bold">Contact Us</h2>
-      <div
-        class="flex items-center space-x-8 text-2xl font-extrabold sm:mt-16"
-      >
+      <div class="flex items-center mt-16 space-x-8 text-2xl font-extrabold">
         <a
           href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
           class="flex items-center space-x-1"
@@ -140,16 +148,32 @@
           </button>
         </p>
         <p v-if="message" class="pt-4 text-center text-brand">
-          <span class="px-4 py-2 bg-orange-100 rounded-md">{{
-            message
-          }}</span>
+          <span class="px-4 py-2 bg-orange-100 rounded-md">{{ message }}</span>
         </p>
       </form>
     </section>
 
     <section class="flex flex-col items-center px-4 bg-gray-100 py-14 text-brand">
-      <div class="grid max-w-full gap-6 sm:grid-cols-2">
-        <img v-for="i in 9" :key="i" :src="`/img/hotel/${i}.jpeg`" class="w-full rounded-md">
+      <video
+        src="/video/english.mp4"
+        controls
+        class="w-full max-w-3xl bg-orange-100 rounded-md outline-none"
+      ></video>
+    </section>
+
+    <section
+      class="flex flex-col items-center text-gray-100 bg-brand"
+    >
+      <h2 class="mt-12 text-4xl font-bold">Hotel in Casablanca</h2>
+      <div
+        class="flex items-stretch w-full px-6 space-x-6 overflow-x-auto py-14"
+      >
+        <img
+          v-for="i in 9"
+          :key="i"
+          :src="`/img/hotel/${i}.jpeg`"
+          class="rounded-md h-72"
+        />
       </div>
     </section>
 
@@ -203,11 +227,11 @@ html {
   mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
 }
 .shape {
-  shape-outside: polygon(0% 0%,0% 0%,50% 100%,0% 100%);
+  shape-outside: polygon(0% 0%, 0% 0%, 50% 100%, 0% 100%);
   width: 300px;
   height: 500px;
   float: left;
-  opacity: .2;
+  opacity: 0.2;
 }
 .form-input {
   @apply block w-full bg-gray-200 py-2 px-3 rounded-md focus:bg-gray-100 outline-none border-transparent focus:border-orange-500 border-2;
