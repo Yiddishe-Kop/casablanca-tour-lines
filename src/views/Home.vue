@@ -83,7 +83,7 @@
         <a href="https://www.ctlmorocco.com" target="_blank">www.ctlmorocco.com</a>
       </div>
 
-      <form name="morocco-signup" method="POST" data-netlify="true" class="relative z-10 block max-w-full mt-20 space-y-2 -mb-44 w-96">
+      <form name="morocco-signup" method="POST" netlify class="relative z-10 block max-w-full mt-20 space-y-2 -mb-44 w-96">
         <input type="text" name="name" placeholder="Name" class="form-input" >
         <input type="email" name="email" placeholder="Email" class="form-input" >
         <input type="tel" name="phone" placeholder="Tel" class="form-input" >
