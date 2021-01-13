@@ -2,7 +2,7 @@
   <main class="relative bg-orange-100 text-brand">
     <nav class="absolute top-0 z-20 flex items-center justify-between w-full px-6 py-4">
       <a href="/"><img src="/img/logo.png" class="w-28" /></a>
-      <a href="#form" class="px-4 py-1.5 transition transform hover:scale-105 text-sm tracking-wider text-orange-100 uppercase rounded-full bg-brand">Join now</a>
+      <a href="#form" class="px-4 py-1.5 mr-6 transition transform hover:scale-105 text-sm tracking-wider text-orange-100 uppercase rounded-full bg-brand">Join now</a>
     </nav>
     <img
       src="/img/shaar.jpg"
@@ -14,7 +14,7 @@
           Miracles<br />in Toulal
         </h1>
       </div>
-      <h3 class="text-2xl font-bold sm:text-3xl text-amber-900">
+      <h3 class="font-serif text-2xl font-bold sm:text-3xl text-amber-900">
         At the tomb of the Holy Tzaddik<br />Rabbi Yitzchok Abuchatzira zy"a
       </h3>
     </div>
@@ -23,10 +23,10 @@
       class="relative bottom-0 z-0 w-full feather-top"
     />
 
-    <section class="flex flex-col items-center px-4 py-12">
-      <img src="/img/logo.png" class="w-64 mx-auto" />
+    <section class="flex flex-col items-center px-4 pb-12">
+      <img src="/img/logo.png" class="w-64 mx-auto transform -translate-y-1/2" />
 
-      <div class="relative">
+      <div class="relative -mt-16">
         <div class="flex items-center justify-center">
           <span class="-mr-8 font-black leading-none text-huge sm:text-massive"
             >4</span
@@ -38,12 +38,12 @@
             class="px-6 py-4 text-center transform bg-white shadow-md rotate-6"
           >
             <p class="text-lg font-bold">Tickets to Morroco</p>
-            <p class="text-5xl font-black">ONLY!</p>
+            <p class="font-serif text-5xl font-black">ONLY!</p>
           </div>
         </div>
       </div>
 
-      <article class="max-w-lg mt-32 space-y-2 text-lg">
+      <article class="max-w-lg mt-40 space-y-2 text-lg">
         <p>
           In these days when a pandemic is raging in the world, who does not
           need salvation, every year we travel to pray on the tombs of the holy

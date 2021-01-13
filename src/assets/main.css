@@ -3,3 +3,11 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: "Cinzel";
+  font-weight: 400 900;
+  font-style: normal;
+  src: url("/fonts/Cinzel.ttf");
+  font-display: swap;
+}
