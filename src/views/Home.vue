@@ -16,13 +16,24 @@
     />
     <div class="relative px-2 pt-32 text-center">
       <div class="py-24">
-        <h1 class="font-black text-7xl sm:text-8xl md:text-9xl">
-          Miracles<br />in Toulal
+        <h1 class="relative font-black text-7xl sm:text-8xl md:text-9xl">
+          <span>Miracles<br />in Toulal</span>
+          <span
+            class="absolute bottom-0 px-3 py-1 font-serif text-4xl transform -translate-x-full translate-y-6 bg-orange-100 bg-opacity-80 text-amber-800 -rotate-3"
+            >Morocco</span
+          >
         </h1>
       </div>
-      <h3 class="font-serif text-3xl font-bold sm:text-4xl md:text-5xl text-amber-900">
-        At the tomb of the Holy Tzaddik<br />Rabbi Yitzchok Abuchatzira zy"a
+      <h3
+        class="font-serif text-3xl font-black sm:text-4xl md:text-5xl text-amber-900"
+      >
+        At the Hillula of the Holy Tzaddik
       </h3>
+      <h1
+        class="mt-1 font-serif text-4xl font-black text-brand sm:text-5xl md:text-6xl"
+      >
+        Rabbi Yitzchok Abuchatzira zy"a
+      </h1>
     </div>
     <img
       src="/img/grave.jpg"
@@ -93,20 +104,28 @@
       class="flex flex-col items-center px-4 text-gray-100 py-14 bg-brand"
     >
       <h2 class="text-5xl font-bold">Contact Us</h2>
-      <div class="flex items-center mt-16 space-x-8 text-2xl font-extrabold">
+      <div
+        class="flex flex-col items-center mt-16 space-y-4 text-2xl font-extrabold"
+      >
         <a
-          href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
+          href="https://wa.me/19179829999?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
           class="flex items-center space-x-1"
         >
           <img src="/img/whatsapp-icon.png" class="w-8" />
-          <span>+972.52.8800050</span>
+          <span><span class="font-normal">(+1)</span> 917-982-9999</span>
         </a>
-        <a href="tel:+19179829999">+1.91.79829999</a>
+        <a
+          href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
+          class="flex items-center space-x-1 text-lg font-normal"
+        >
+          <img src="/img/whatsapp-icon.png" class="w-5" />
+          <span>(+972) 052-8800050</span>
+        </a>
       </div>
 
-      <div class="flex items-center mt-2 space-x-4 text-xl">
+      <div class="flex items-center mt-4 space-x-4 text-xl">
         <a href="mailto:info@ctlmorocco.com">info@ctlmorocco.com</a>
-        <span>|</span>
+        <span class="text-gray-400">|</span>
         <a href="https://www.ctlmorocco.com" target="_blank"
           >www.ctlmorocco.com</a
         >
@@ -153,7 +172,9 @@
       </form>
     </section>
 
-    <section class="flex flex-col items-center px-4 bg-gray-100 py-14 text-brand">
+    <section
+      class="flex flex-col items-center px-4 bg-gray-100 py-14 text-brand"
+    >
       <video
         src="/video/english.mp4"
         controls
@@ -161,10 +182,11 @@
       ></video>
     </section>
 
-    <section
-      class="flex flex-col items-center text-gray-100 bg-brand"
-    >
-      <h2 class="mt-12 text-4xl font-bold">Hotel in Casablanca</h2>
+    <section class="flex flex-col items-center text-gray-100 bg-brand">
+      <h2 class="mt-12 font-serif text-4xl font-bold">Shabbos in Marakesh</h2>
+      <h5 class="mt-2 font-serif text-2xl text-orange-200 uppercase">
+        Luxury Hotels
+      </h5>
       <div
         class="flex items-stretch w-full px-6 space-x-6 overflow-x-auto py-14"
       >
@@ -177,6 +199,66 @@
       </div>
     </section>
 
+    <section
+      class="grid items-center grid-cols-1 sm:grid-cols-2 text-orange-50"
+      style="background: #402140"
+    >
+      <div class="relative z-20 flex flex-col space-y-6 sm:pr-8 py-14">
+        <div class="space-y-2 font-serif text-xl text-center sm:text-right">
+          <p>Glatt Kosehr Gourmet meals</p>
+          <p>under the strict kashrus of</p>
+          <p>Rabbi Shneur Zalman Revach Shlita</p>
+        </div>
+        <img src="/img/kashrus.png" class="self-center sm:self-end w-28" />
+      </div>
+
+      <div class="relative h-96">
+        <image-slider
+          :images="images.food"
+          class="w-full h-full"
+        />
+        <svg
+          style="color: #402140"
+          class="absolute inset-y-0 left-0 hidden w-48 h-full transform -translate-x-1/2 sm:block"
+          fill="currentColor"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
+      </div>
+    </section>
+
+    <section
+      class="grid items-center grid-cols-1 bg-brand sm:grid-cols-2 text-orange-50"
+    >
+
+      <div class="relative h-96">
+        <image-slider
+          :images="images.music"
+          class="w-full h-full"
+        />
+        <svg
+          class="absolute inset-y-0 right-0 hidden w-48 h-full transform translate-x-1/2 text-brand sm:block"
+          fill="currentColor"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
+      </div>
+
+       <div class="relative z-20 flex flex-col row-start-1 space-y-6 sm:row-start-auto sm:pl-8 py-14">
+        <div class="space-y-2 font-serif text-xl text-center sm:text-left">
+          <p>Moroccan music with local musicians and orchestras</p>
+          <p>Every evening at the hotel</p>
+        </div>
+      </div>
+
+    </section>
+
     <section class="relative">
       <img src="/img/tour.jpg" class="relative bottom-0 z-0 w-full" />
     </section>
@@ -184,11 +266,35 @@
 </template>
 
 <script>
+import ImageSlider from "../components/ImageSlider.vue";
+
 export default {
+  components: { ImageSlider },
   data() {
     return {
       form: {},
       message: "",
+      images: {
+        food: [
+          "/img/food/1.jpeg",
+          "/img/food/2.jpeg",
+          "/img/food/3.jpeg",
+          "/img/food/4.jpeg",
+          "/img/food/5.jpeg",
+          "/img/food/6.jpeg",
+          "/img/food/7.jpeg",
+          "/img/food/8.jpeg",
+          "/img/food/9.jpeg",
+          "/img/food/10.jpeg",
+        ],
+        music: [
+          "/img/music/1.jpeg",
+          "/img/music/2.jpeg",
+          "/img/music/3.jpeg",
+          "/img/music/4.jpeg",
+          "/img/music/5.jpeg",
+        ],
+      },
     };
   },
   methods: {
