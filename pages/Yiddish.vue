@@ -150,8 +150,8 @@
         <input
           v-model="form.phone"
           type="tel"
-          name="טלפון"
-          placeholder="Tel"
+          name="phone"
+          placeholder="טלפון"
           class="form-input"
         />
         <p class="py-2 text-center">

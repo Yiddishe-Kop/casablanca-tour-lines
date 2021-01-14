@@ -132,6 +132,7 @@
       </div>
 
       <form
+        @submit.prevent="submit"
         name="morocco-signup"
         netlify
         class="relative z-10 block max-w-full mt-20 space-y-2 w-96"
