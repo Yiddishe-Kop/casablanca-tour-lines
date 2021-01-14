@@ -132,6 +132,7 @@
         netlify
         class="relative z-10 block max-w-full mt-20 space-y-2 w-96"
       >
+        <input type="hidden" name="form-name" value="morocco-signup" />
         <input
           v-model="form.name"
           type="text"
@@ -245,6 +246,15 @@
 
     <section class="relative">
       <img src="/img/tour.jpg" class="relative bottom-0 z-0 w-full" />
+      <div
+        class="absolute flex items-center justify-center bottom-6 right-4 left-4"
+      >
+        <NuxtLink
+          to="/"
+          class="text-lg text-white underline hover:text-orange-200"
+          >English</NuxtLink
+        >
+      </div>
     </section>
   </main>
 </template>
@@ -283,7 +293,7 @@ export default {
   },
   methods: {
     submit(e) {
-      fetch("/", {
+      window.fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
@@ -303,30 +313,3 @@ function encode(data) {
     .join("&");
 }
 </script>
-
-<style lang="scss">
-html {
-  scroll-behavior: smooth;
-}
-.feather-bottom {
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
-  mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
-}
-.feather-top {
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
-  mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
-}
-.shape {
-  shape-outside: polygon(0% 0%, 0% 0%, 50% 100%, 0% 100%);
-  width: 300px;
-  height: 500px;
-  float: left;
-  opacity: 0.2;
-}
-.form-input {
-  @apply block w-full bg-gray-200 py-2 px-3 rounded-md outline-none border-transparent border-2;
-  &:focus {
-    @apply bg-gray-100 border-orange-500;
-  }
-}
-</style>

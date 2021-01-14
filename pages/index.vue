@@ -255,6 +255,9 @@
 
     <section class="relative">
       <img src="/img/tour.jpg" class="relative bottom-0 z-0 w-full" />
+      <div class="absolute flex items-center justify-center bottom-6 right-4 left-4">
+          <NuxtLink to="/yiddish" class="text-lg text-white underline font-heebo hover:text-orange-200">אידיש</NuxtLink>
+      </div>
     </section>
   </main>
 </template>
@@ -293,7 +296,7 @@ export default {
   },
   methods: {
     submit(e) {
-      fetch("/", {
+      window.fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
@@ -334,7 +337,7 @@ html {
   opacity: 0.2;
 }
 .form-input {
-  @apply block w-full bg-gray-200 py-2 px-3 rounded-md outline-none border-transparent border-2;
+  @apply block w-full bg-gray-200 text-gray-800 py-2 px-3 rounded-md outline-none border-transparent border-2;
   &:focus {
     @apply bg-gray-100 border-orange-500;
   }
