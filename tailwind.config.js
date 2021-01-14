@@ -33,7 +33,9 @@ module.exports = {
     extend: {
       fontWeight: ['hover', 'focus'],
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', 'Heebo', ...defaultTheme.fontFamily.sans],
+        heebo: ['Heebo', ...defaultTheme.fontFamily.sans],
+        casablanca: ['CasablancaOld', ...defaultTheme.fontFamily.sans],
         serif: ['Cinzel', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
