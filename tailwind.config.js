@@ -34,11 +34,16 @@ module.exports = {
       fontWeight: ['hover', 'focus'],
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        serif: ['Cinzel', ...defaultTheme.fontFamily.sans],      },
+        serif: ['Cinzel', ...defaultTheme.fontFamily.sans],
+      },
       fontSize: {
         huge: '16rem',
         massive: '20rem'
       }
     },
   },
+
+  plugins: [
+    require('tailwindcss-rtl'),
+  ]
 }

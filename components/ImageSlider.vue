@@ -15,7 +15,7 @@ export default {
     images: Array,
     interval: {
       type: Number,
-      default: 2500,
+      default: 3500,
     },
   },
   data() {

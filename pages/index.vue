@@ -42,12 +42,12 @@
 
     <section class="flex flex-col items-center px-4 pb-32">
       <img
-        src="/img/logo.png"
-        class="w-64 mx-auto transform -translate-y-1/2"
+        src="/img/logo-wings.png"
+        class="object-contain h-56 transform -translate-y-1/3 mxuto"
       />
 
       <div
-        class="flex flex-col items-center justify-center md:flex-row md:space-x-12"
+        class="flex flex-col items-center justify-center md:flex-row md:space-s-12"
       >
         <div class="relative -mt-16 sm:m-0 sm:-mt-24">
           <div class="flex items-center justify-center">
@@ -109,21 +109,21 @@
       >
         <a
           href="https://wa.me/19179829999?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
-          class="flex items-center space-x-1"
+          class="flex items-center space-s-1"
         >
           <img src="/img/whatsapp-icon.png" class="w-8" />
           <span><span class="font-normal">(+1)</span> 917-982-9999</span>
         </a>
         <a
           href="https://wa.me/972528800050?text=I%20would%20like%20to%20sign%20up%20for%20the%20trip%20to%20Morocco"
-          class="flex items-center space-x-1 text-lg font-normal"
+          class="flex items-center text-lg font-normal space-s-1"
         >
           <img src="/img/whatsapp-icon.png" class="w-5" />
           <span>(+972) 052-8800050</span>
         </a>
       </div>
 
-      <div class="flex items-center mt-4 space-x-4 text-xl">
+      <div class="flex items-center mt-4 text-xl space-s-4">
         <a href="mailto:info@ctlmorocco.com">info@ctlmorocco.com</a>
         <span class="text-gray-400">|</span>
         <a href="https://www.ctlmorocco.com" target="_blank"
@@ -188,7 +188,7 @@
         Luxury Hotels
       </h5>
       <div
-        class="flex items-stretch w-full px-6 space-x-6 overflow-x-auto py-14"
+        class="flex items-stretch w-full px-6 overflow-x-auto space-s-6 py-14"
       >
         <img
           v-for="i in 9"
@@ -252,8 +252,7 @@
 
        <div class="relative z-20 flex flex-col row-start-1 space-y-6 sm:row-start-auto sm:pl-8 py-14">
         <div class="space-y-2 font-serif text-xl text-center sm:text-left">
-          <p>Moroccan music with local musicians and orchestras</p>
-          <p>Every evening at the hotel</p>
+          <p>Moroccan music with local musicians and orchestras every evening at the hotel</p>
         </div>
       </div>
 
@@ -266,7 +265,7 @@
 </template>
 
 <script>
-import ImageSlider from "../components/ImageSlider.vue";
+import ImageSlider from "~/components/ImageSlider";
 
 export default {
   components: { ImageSlider },
@@ -320,7 +319,7 @@ function encode(data) {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   scroll-behavior: smooth;
 }
@@ -340,6 +339,9 @@ html {
   opacity: 0.2;
 }
 .form-input {
-  @apply block w-full bg-gray-200 py-2 px-3 rounded-md focus:bg-gray-100 outline-none border-transparent focus:border-orange-500 border-2;
+  @apply block w-full bg-gray-200 py-2 px-3 rounded-md outline-none border-transparent border-2;
+  &:focus {
+    @apply bg-gray-100 border-orange-500;
+  }
 }
 </style>

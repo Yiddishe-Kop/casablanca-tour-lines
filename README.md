@@ -1,45 +1,20 @@
-# Vite + Tailwind CSS Starter
+# casablanca
 
-> A [Tailwind CSS](http://tailwindcss.com/) starter template for [Vite](https://github.com/vitejs/vite)
+## Build Setup
 
-## Tailwind UI Users
+```bash
+# install dependencies
+$ yarn install
 
-If you have access to [Tailwind UI](https://tailwindui.com), follow these steps to add it:
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-1. Install first-party plugins:
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-```sh
-yarn add @tailwindcss/forms @tailwindcss/typography @tailwindcss/aspect-ratio
+# generate static project
+$ yarn generate
 ```
 
-2. Add the plugins to `tailwind.config.js`:
-
-```js
-// tailwind.config.js
-module.exports = {
-  // ...
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ]
-}
-```
-
-## Installation
-
-```sh
-yarn
-```
-
-## Development
-
-```sh
-yarn dev
-```
-
-## Build
-
-```sh
-yarn build
-```
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
