@@ -82,7 +82,9 @@
               הישועות רבינו יצחק אבוחצירא זי״ע.
             </p>
             <p>
-              אויב ביזטו אינטרעסירט צו זיין פון דער 40 יחידי סגולה וואס וועלן האבן די זכיה צו פארן קיין מאראקא דער יאר פאר די אכט-טאגיגע נסיעה, צוזאמען מיט א דערהויבענע שבת אין א ספעציעלע דערהויבענע אטמאספערע -
+              אויב ביזטו אינטרעסירט צו זיין פון דער 40 יחידי סגולה וואס וועלן
+              האבן די זכיה צו פארן קיין מאראקא דער יאר פאר די אכט-טאגיגע נסיעה,
+              צוזאמען מיט א דערהויבענע שבת אין א ספעציעלע דערהויבענע אטמאספערע -
             </p>
             <p class="pt-2 text-xl font-bold uppercase sm:text-2xl">
               אייל זיך צו און שרייבט זיך איין היינט!
@@ -165,15 +167,13 @@
       </form>
     </section>
 
-    <section
-      class="flex flex-col items-center px-4 bg-gray-100 py-14 text-brand"
-    >
-      <video
-        src="/video/english.mp4"
-        controls
-        class="w-full max-w-3xl bg-orange-100 rounded-md outline-none"
-      ></video>
-    </section>
+    <video
+      src="/video/yiddish.mp4"
+      controls
+      autoplay
+      muted
+      class="w-full bg-orange-100 outline-none"
+    ></video>
 
     <section class="flex flex-col items-center text-gray-100 bg-brand">
       <h2 class="mt-12 text-4xl font-bold">שבת אין מאראקעש</h2>
@@ -238,9 +238,7 @@
         class="relative z-20 flex flex-col row-start-1 space-y-6 sm:row-start-auto sm:ps-8 py-14"
       >
         <div class="space-y-2 text-xl text-center sm:text-start">
-          <p>
-            מאראקאנער מוזיק מיט לאקאלע מוזיקאנטן יעדער אוונט אינעם האטעל
-          </p>
+          <p>מאראקאנער מוזיק מיט לאקאלע מוזיקאנטן יעדער אוונט אינעם האטעל</p>
         </div>
       </div>
     </section>

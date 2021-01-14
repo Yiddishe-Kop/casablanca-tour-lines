@@ -172,15 +172,13 @@
       </form>
     </section>
 
-    <section
-      class="flex flex-col items-center px-4 bg-gray-100 py-14 text-brand"
-    >
-      <video
-        src="/video/english.mp4"
-        controls
-        class="w-full max-w-3xl bg-orange-100 rounded-md outline-none"
-      ></video>
-    </section>
+    <video
+      src="/video/english.mp4"
+      controls
+      autoplay
+      muted
+      class="w-full bg-orange-100 outline-none"
+    ></video>
 
     <section class="flex flex-col items-center text-gray-100 bg-brand">
       <h2 class="mt-12 font-serif text-4xl font-bold">Shabbos in Marakesh</h2>
@@ -213,10 +211,7 @@
       </div>
 
       <div class="relative h-96">
-        <image-slider
-          :images="images.food"
-          class="w-full h-full"
-        />
+        <image-slider :images="images.food" class="w-full h-full" />
         <svg
           style="color: #402140"
           class="absolute inset-y-0 left-0 hidden w-48 h-full transform -translate-x-1/2 sm:block"
@@ -233,12 +228,8 @@
     <section
       class="grid items-center grid-cols-1 bg-brand sm:grid-cols-2 text-orange-50"
     >
-
       <div class="relative h-96">
-        <image-slider
-          :images="images.music"
-          class="w-full h-full"
-        />
+        <image-slider :images="images.music" class="w-full h-full" />
         <svg
           class="absolute inset-y-0 right-0 hidden w-48 h-full transform translate-x-1/2 text-brand sm:block"
           fill="currentColor"
@@ -250,12 +241,16 @@
         </svg>
       </div>
 
-       <div class="relative z-20 flex flex-col row-start-1 space-y-6 sm:row-start-auto sm:pl-8 py-14">
+      <div
+        class="relative z-20 flex flex-col row-start-1 space-y-6 sm:row-start-auto sm:pl-8 py-14"
+      >
         <div class="space-y-2 font-serif text-xl text-center sm:text-left">
-          <p>Moroccan music with local musicians and orchestras every evening at the hotel</p>
+          <p>
+            Moroccan music with local musicians and orchestras every evening at
+            the hotel
+          </p>
         </div>
       </div>
-
     </section>
 
     <section class="relative">
